@@ -2,58 +2,107 @@ body {
     font-size: 16px;
     color: rgba(255, 255, 255, 0.8);
     margin: 0 auto;
-    font-family: sans-serif;
-    background-color: #250060;
+    font-family: 'Raleway', sans-serif;
+    background-color: #1a1a1a;
+    overflow: hidden;
 }
 
 .container {
-    max-width: 940px;
-    min-height: 100vh;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-#identity {
-    width: 50%;
-    height: 250px;
-    background: linear-gradient(45deg, rgba(84,0,103,1) 0%, rgba(58,13,132,1) 100%);
-    display: flex;
-    border-radius: 0.5rem; 
-    box-shadow: 5px 5px 15px 5px #000000;
+/* HEADER */
+
+.header, .header__nav {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    padding: 1rem;
 }
 
-#photo {
+.header__nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* COMMUN */
+.section {
+    width: 100%;
+    height: 100vh;
     display: flex;
     align-items: center;
+    overflow: hidden;
     justify-content: center;
 }
 
-#photo img {
-    max-width: 75%;
-    border-radius: 0.5rem;
-}
 
-#infos {
+/* WELCOME */
+.welcome {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient( rgba(26,26,26,1),rgba(26,26,26, 0.7)), fixed no-repeat center / cover url(../img/bienvenue-filtre.jpg);
 }
 
-#infos h1 {
-    font-size: 2.5rem;
+.welcome h1 {
+    font-size: 16rem;
+    /* text-transform: uppercase; */
 }
 
-.border {
-    width: 90%;
-    height: 0.1rem;
-    background: linear-gradient(90deg, rgba(160,238,255,1) 0%, rgba(249,76,247,1) 100%);
-    margin: 1rem auto;
+.welcome p {
+    text-align: center;
 }
 
-#infos h2 {
+.welcome p:nth-of-type(1) {
+    font-size: 3.5rem;
+}
+
+.welcome p:nth-of-type(2) {
+    padding: 2rem 0;
+    max-width: 50%;
     font-size: 2rem;
+}
+
+.welcome p:nth-of-type(3) {
+    max-width: 40%;
+    font-size: 1.5rem;
+}
+
+#welcome
+
+/* ME */
+#me {
+
+}
+
+/* SOFT SKILLS */
+#soft-skills {
+   
+}
+
+/* HARD SKILLS */
+#hard-skills {
+    
+}
+
+/* EXPERIENCE */
+#experience {
+    
+}
+
+/* FORMATION */
+#formation {
+    
+}
+
+/* CONTACT */
+#contact {
+    
 }

@@ -6,26 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Raleway:wght@200;400;700&display=swap" rel="stylesheet"> 
     <title>Carte d'Identité Professionnelle</title>
 </head>
 <body>
     <div class="container">
-        <section id="identity">
-            <div id="photo">
-                <img src="img/portrait.jpg" alt="portrait">
-            </div>
-            <div id="infos">
-                <h1>NEGRIER Nicolas</h1>
-                <div class="border"></div>
-                <h2>Developp Web JavaScript</h2>
-                <section id="reseau"></section>
-                <section class="liens"></section>
-            </div>
-            
+        <header class="header">
+            <nav class="header__nav">
+                    <a href="#welcome">Bienvenue</a>
+                    <a href="#me">Qui suis-je?</a>
+                    <a href="#soft-skills">Soft Skills</a>
+                    <a href="#hard-skills">Hard Skills</a>
+                    <a href="#experience">Expériences</a>
+                    <a href="#formation">Formations</a>
+                    <a href="#contact">Discutons</a>
+            </nav>
+        </header>
+        <section class="section welcome" id="welcome">
+            <h1>Bienvenue</h1>
+            <p>sur mon site personnelle mais professionnel!</p>
+            <p>J'espere que vous trouverez ce qu'il vous faut que ce soit en terme de savoir faire mais aussi en tant que personne.</p>
+            <p>Bonne découverte à vous et au plaisir de vous rencontrer!</p>
         </section>
-        <section class="research"></section>
-
+        <section class="section" id="me">Qui suis-je ?</section>
+        <section class="section" id="soft-skills">Soft Skills</section>
+        <section class="section" id="hard-skills">Hard Skills</section>
+        <section class="section" id="experience">Expériences</section>
+        <section class="section" id="formation">Formations</section>
+        <section class="section" id="contact">Discutons</section>
     </div>
-    
+    <script src="scripts/script.js"></script>
 </body>
 </html>
