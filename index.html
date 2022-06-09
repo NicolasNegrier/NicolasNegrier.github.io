@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- <link rel="stylesheet" media="screen and (max-width: 1280px)" href="css/mobil-styles.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="fontawesome/css/all.css">
@@ -14,25 +15,46 @@
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <nav class="header__nav">
-                    <a href="#welcome">Bienvenue</a>
-                    <a href="#me">Qui suis-je?</a>
-                    <a href="#soft-skills">Soft Skills</a>
-                    <a href="#hard-skills">Hard Skills</a>
-                    <a href="#experience">Expériences</a>
-                    <a href="#formation">Formations</a>
-                    <a href="#contact">Discutons</a>
-            </nav>
-        </header>
+        <nav class="nav">
+            <div class="nav__link">
+                <a href="#welcome">Bienvenue</a>
+                <a href="#me">Qui suis-je?</a>
+                <a href="#soft-skills">Soft Skills</a>
+                <a href="#hard-skills">Hard Skills</a>
+                <a href="#experience">Expériences</a>
+                <a href="#formation">Formations</a>
+                <a href="#contact">Discutons</a>
+            </div>
+            <button class="burger" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        
         <section class="section welcome" id="welcome">
             <h1>Bienvenue</h1>
-            <p>sur mon site personnelle mais professionnel!</p>
+            <p>sur mon site personnelle pour les professionnels!</p>
             <p>J'espere que vous trouverez ce qu'il vous faut que ce soit en terme de savoir faire mais aussi en tant que personne.</p>
             <p>Bonne découverte à vous et au plaisir de vous rencontrer!</p>
         </section>
-        <section class="section" id="me">Qui suis-je ?</section>
-        <section class="section" id="soft-skills">Soft Skills</section>
+        <section class="section me" id="me">
+            <h1>Qui suis-je ?</h1>
+            <article class="me__article">
+                <img src="https://via.placeholder.com/640x480.png/a59090/000000?Text=640x480" alt="">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta vel dolorem, delectus nobis laboriosam, eveniet qui enim placeat dignissimos nam doloremque dolor aliquam a quidem ab quo et debitis illo!</p>
+            </article>
+        </section>
+        <section class="section soft-skills" id="soft-skills">
+            <h1>Soft Skills</h1>
+            <div class="soft-skills__icons">
+                <i class="fa-solid fa-5x fa-people-group"></i>
+                <i class="fa-solid fa-5x fa-comments"></i>
+                <i class="fa-solid fa-5x fa-chalkboard-user"></i>
+                <i class="fa-solid fa-5x fa-book"></i>
+                <i class="fa-solid fa-5x fa-sitemap"></i>
+            </div>
+        </section>
         <section class="section" id="hard-skills">Hard Skills</section>
         <section class="section" id="experience">Expériences</section>
         <section class="section" id="formation">Formations</section>

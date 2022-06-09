@@ -1,7 +1,7 @@
 
-window.addEventListener("DOMContentLoaded", (event) => {
+// window.addEventListener("DOMContentLoaded", (event) => {
 
-});
+// });
 
 const navLinks = [...document.querySelectorAll('nav a')];
 const sections = [...document.querySelectorAll('section')];
@@ -16,10 +16,23 @@ navLinks.forEach(link => link.addEventListener("click", addNavSmooth));
 
 function addNavSmooth (event) {
     const linkIndex = navLinks.indexOf(event.target);
-    console.log(linkIndex);
+    console.log(navLinks[linkIndex]);
     console.log(sectionsPosition[linkIndex]);
     window.scrollTo({
         top: sectionsPosition[linkIndex],
         behavior: "smooth",
     });
 }
+
+window.addEventListener("resize", getPosition);
+
+const burgerToggler = document.querySelector('.burger');
+const navLinksContainer = document.querySelector('.nav__link');
+
+const toggleNav = () => {
+    burgerToggler.classList.toggle('open');
+
+    navLinksContainer.classList.toggle('open');
+}
+
+burgerToggler.addEventListener('click', toggleNav);
