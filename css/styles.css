@@ -66,7 +66,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* overflow: hidden; */
+    overflow: hidden;
     
 }
 
@@ -131,14 +131,38 @@ body {
 /* SOFT SKILLS */
 .soft-skills {
    justify-content: center;
+   text-align: center;
+}
+
+.soft-skills div {
+    margin: 1rem;
 }
 
 .soft-skills h1 {
     font-size: 5vw;
 }
 
+.soft-skills h2 {
+    font-size: 2vw;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.soft-skills__icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .soft-skills__icons i {
-    padding: 6rem;
+    padding: 3rem;
+    font-size: 5em;
+}
+
+.soft-skills__icons li i {
+    font-size: 1em;
+    transform: rotate(45deg);
+    padding: 0.6rem;
 }
 
 /* HARD SKILLS */
@@ -236,6 +260,7 @@ body {
         transform: translate(0%);
     }
 
+    /* PARTIE WELCOME */
     .welcome p:nth-of-type(2) {
         max-width: 70%;
         font-size: 1rem;
@@ -263,6 +288,29 @@ body {
 
     /* SOFT-SKILLS */
     .soft-skills__icons i {
-        padding: 2rem;
+        padding: 0.5rem;
+        font-size: 3em;
     }
+
+    .soft-skills__icons h2 {
+        font-size: 1rem;
+    }
+
+    .soft-skills__icons div {
+        width: 50%;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .soft-skills__icons li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .soft-skills__icons li i {
+        font-size: 0.5em;
+    }
+
+
 }
