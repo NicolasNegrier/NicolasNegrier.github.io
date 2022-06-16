@@ -1,0 +1,350 @@
+body {
+    font-size: 16px;
+    color: #ffffffcc;
+    margin: 0 auto;
+    font-family: 'Raleway', sans-serif;
+    background-color: #1a1a1a;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HEADER */
+
+.nav {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+}
+
+.nav__link {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav__link a {
+    position: relative;
+}
+
+.nav__link a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: linear-gradient(to right, #0a1123, #018e7b);
+    transition: transform 0.3s ease-out;
+}
+
+.nav__link a:hover::after {
+    transform: scaleX(1);
+}
+
+.burger {
+    display: none;
+}
+
+/* COMMUN */
+.section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+h1 {
+    text-decoration: underline;
+    text-decoration-color:  #018e7b;
+}
+
+.me h1, .soft-skills h1, .hard-skills h1, .experience h1, .formation h1, .contact h1 {
+    font-weight: 700;
+    font-size: 5vw;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div>i:hover {
+    color: #018e7b;
+    transition: 0.3s ease-out;
+}
+
+
+/* WELCOME */
+.welcome {
+    background: linear-gradient( rgba(26,26,26,1),rgba(26,26,26, 0.7)), fixed no-repeat center / cover url(../img/bienvenue-filtre.jpg);
+    justify-content: center;
+}
+
+.welcome h1 {
+    max-width: 90%;
+    font-size: 16vw;
+    /* text-transform: uppercase; */
+}
+
+.welcome p {
+    text-align: center;
+}
+
+.welcome p:nth-of-type(1) {
+    font-size: 3.5vw;
+}
+
+.welcome p:nth-of-type(2) {
+    padding: 2rem 0;
+    max-width: 50%;
+    font-size: 2vw;
+}
+
+.welcome p:nth-of-type(3) {
+    max-width: 40%;
+    font-size: 1.5vw;
+}
+
+/* ME */
+.me {
+    justify-content: space-evenly;
+}
+
+.me__article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+}
+
+.me__article img {
+    max-width: 40%;
+}
+
+.me__article p {
+    max-width: 60%;
+    padding-left: 2rem;
+}
+
+/* SOFT SKILLS */
+.soft-skills {
+   justify-content: space-evenly;
+   text-align: center;
+}
+
+.soft-skills div {
+    margin: 1rem;
+}
+
+.soft-skills h2 {
+    font-size: 2vw;
+    margin-bottom: 1rem;
+    max-width: 75%;
+}
+
+.soft-skills h3 {
+    font-size: 2vw;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.soft-skills__icons i {
+    padding: 3rem;
+    font-size: 5em;
+}
+
+.soft-skills__icons li i {
+    font-size: 1em;
+    transform: rotate(45deg);
+    padding: 0.6rem;
+}
+
+/* HARD SKILLS */
+
+.hard-skills {
+    justify-content: center;
+}
+
+.hard-skills__cat {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+.hard-skills__frontend, .hard-skills__backend, .hard-skills__outils {
+    width: 50%;
+}
+
+.hard-skills h2 {
+    font-size: 2vw;
+    margin-bottom: 1rem;
+    max-width: 75%;
+}
+
+/* EXPERIENCE */
+#experience {
+    
+}
+
+/* FORMATION */
+#formation {
+    
+}
+
+/* CONTACT */
+#contact {
+    
+}
+
+@media (max-width: 900px) {
+
+    .nav {
+        width: auto;
+        padding: 0;
+    }
+
+    .burger {
+        width: 30px;
+        height: 30px;
+        border: 0;
+        padding: 0;
+        margin: 10px;
+        cursor: pointer;
+        display: flex;
+        background: #ffffffcc;
+        align-items: center;
+        position: relative;
+    }
+
+    .burger span:nth-child(1), .burger span:nth-child(3) {
+        transition: transform 0.3s ease-out;
+    }
+
+    .burger span:nth-child(1) {
+        transform: translateY(8px);
+    }
+
+    .burger span:nth-child(3) {
+        transform: translateY(-8px);
+    }
+
+    .burger.open span:nth-child(1) {
+        transform: translate(0) rotate(135deg);
+    }
+
+    .burger.open span:nth-child(2) {
+        opacity: 0;
+        transform: opacity 0s;
+    }
+
+    .burger.open span:nth-child(3) {
+        transform: translate(0) rotate(-135deg);
+    }
+
+    .burger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #1a1a1a;
+        position: absolute;
+        pointer-events: none;
+        transition: opacity 0.3s 0.15s ease-out;
+    }
+
+    .nav__link {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgba(26,26,26, 0.7);
+        height: 100vh;
+        padding: 70px 1rem;
+        justify-content: flex-start;
+        position: absolute;
+        transform: translate(-100%);
+        transition: transform 0.3s ease-out;
+    }
+
+    .nav__link a {
+        padding-top: 1rem;
+    }
+
+    .open {
+        transform: translate(0%);
+    }
+
+    /* PARTIE WELCOME */
+    .welcome p:nth-of-type(2) {
+        max-width: 70%;
+        font-size: 1rem;
+    }
+    
+    .welcome p:nth-of-type(3) {
+        max-width: 40%;
+        font-size: 1rem;
+    }
+
+    /* PARTIE QUI SUIS JE */
+
+    .me__article {
+        flex-direction: column;
+    }
+
+    .me__article img, .me__article p {
+        max-width: 90%;
+        padding-top: 2rem;
+    }
+
+    .me {
+        justify-content: center;
+    }
+
+    /* SOFT-SKILLS */
+
+    .soft-skills h2 {
+        font-size: 1rem;
+    }
+
+    .soft-skills__icons i {
+        padding: 0.5rem;
+        font-size: 3em;
+    }
+
+    .soft-skills__icons h3 {
+        font-size: 1rem;
+    }
+
+    .soft-skills__icons div {
+        width: 50%;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .soft-skills__icons li {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .soft-skills__icons li i {
+        font-size: 0.5em;
+    }
+
+
+}
