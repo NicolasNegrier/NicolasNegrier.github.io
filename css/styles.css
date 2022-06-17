@@ -156,4 +156,9 @@ header h2 {
 
 .item__main {
     height: 60px;
+    text-align: center;
+}
+
+.item__main li {
+    margin-bottom: 0.7rem;
 }
