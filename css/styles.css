@@ -18,21 +18,21 @@ body {
 }
 
 /* BOX */
-.big-box {
+.box {
     background-color: #FCFCFC;
     width: 90vw;
     border: #D9D9D9 solid 1px;
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 0 auto 3rem;
     box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.25);
 }
 
 /* HEADER */
 header {
     background: linear-gradient( rgba(26,26,26,1),rgba(26,26,26, 0.5)), fixed no-repeat left / cover url(../img/bienvenue.jpg);
-    height: 75vh;
+    height: 70vh;
     color: #FCFCFC;
-    padding-top: 9rem;
+    padding-top: 8rem;
 }
 
 header h1 {
@@ -111,26 +111,23 @@ header h2 {
     height: 54px;
 }
 
-/* SECTION FORMATION */
+/* SECTION FORMATION ET EXPERIENCE */
 .formation, .experience p {
     width: 90%;
     padding-bottom: 10rem;
     line-height: 1.5rem;
     text-align: center;
 }
+
 .formation h1, .experience h1 {
     font-size: 2rem;
     font-weight: 600;
     padding: 3rem;
 }
-/* SECTION EXPERIENCE */
+
 .experience {
     background-color: #01438E;
     color: #FCFCFC;
-}
-
-.experience h1 {
-
 }
 
 .experience p {
@@ -138,3 +135,25 @@ header h2 {
 }
 /* SECTION SOFT-SKILL */
 
+.soft-skill {
+    margin-top: -10rem;
+}
+
+.soft-skill__item {
+    padding: 40px;
+}
+
+.item__header h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: #01438E;
+}
+
+.item__header img {
+    width: 107px;
+}
+
+.item__main {
+    height: 60px;
+}
