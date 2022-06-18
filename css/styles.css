@@ -90,7 +90,7 @@ header h2 {
     width: 88px;
 }
 
-.cat__header h1 {
+.cat__header h2 {
     color: #018E7B;
     font-size: 2rem;
     font-weight: 700;
@@ -119,7 +119,7 @@ header h2 {
     text-align: center;
 }
 
-.formation h1, .experience h1 {
+.formation h2, .experience h2, footer h2 {
     font-size: 2rem;
     font-weight: 600;
     padding: 3rem;
@@ -143,7 +143,7 @@ header h2 {
     padding: 40px;
 }
 
-.item__header h1{
+.item__header h2{
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
@@ -161,4 +161,17 @@ header h2 {
 
 .item__main li {
     margin-bottom: 0.7rem;
+}
+
+/* SECTION FOOTER */
+footer {
+    height: 30vh;
+    background: linear-gradient( rgba(26,26,26,1),rgba(26,26,26, 0.5)), fixed no-repeat left / cover url(../img/bienvenue.jpg);
+    color: #FCFCFC;
+}
+
+.contact {
+    justify-content: space-evenly;
+    width: 100%;
+    flex-grow: 2;
 }
