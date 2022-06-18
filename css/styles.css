@@ -29,7 +29,7 @@ body {
 
 /* HEADER */
 header {
-    background: linear-gradient( rgba(26,26,26,1),rgba(26,26,26, 0.5)), fixed no-repeat left / cover url(../img/bienvenue.jpg);
+    background: linear-gradient( rgba(26,26,26,1),rgba(26,26,26, 0.5)), fixed no-repeat left url(../img/bienvenue.jpg);
     height: 70vh;
     color: #FCFCFC;
     padding-top: 8rem;
