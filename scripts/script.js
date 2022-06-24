@@ -1,41 +1,29 @@
+const h1HeaderElm = document.querySelector('header h1');
 
-window.addEventListener("DOMContentLoaded", (event) => {
-
+const writeH1 = new Typewriter(h1HeaderElm, {
+    loop: true,
+    delay: 175,
 });
-// DEPLACEMENT DE LA FENETRE AU CLIC
-const navLinks = [...document.querySelectorAll('nav a')];
-const sections = [...document.querySelectorAll('section')];
 
-let sectionsPosition;
-
-function getPosition() {
-    sectionsPosition = sections.map(section => section.offsetTop);
-}
-getPosition();
-navLinks.forEach(link => link.addEventListener("click", addNavSmooth));
-
-function addNavSmooth (event) {
-    const linkIndex = navLinks.indexOf(event.target);
-    console.log(navLinks[linkIndex]);
-    console.log(sectionsPosition[linkIndex]);
-    window.scrollTo({
-        top: sectionsPosition[linkIndex],
-        behavior: "smooth",
-    });
-}
-
-window.addEventListener("resize", getPosition);
+writeH1
+    .typeString('Developpeur Web')
+    .pause(2500)
+    .deleteAll()
+    .start();
 
 
-// MENU TOGGLE
-const burgerToggler = document.querySelector('.burger');
-const navLinksContainer = document.querySelector('.nav__link');
+const h2HeaderElm = document.querySelector('header h2');
 
-const toggleNav = () => {
+const writeH2 = new Typewriter(h2HeaderElm, {
+    loop: true,
+    delay: 175,
+});
 
-    burgerToggler.classList.toggle('open');
-    navLinksContainer.classList.toggle('open');
-}
-
-burgerToggler.addEventListener('click', toggleNav);
-navLinksContainer.addEventListener('click', toggleNav);
+writeH2
+    .typeString('FrontEnd <span style="color: #01438E">HTML</span>')
+    .pause(2500)
+    .deleteAll()
+    .typeString('FullStack JavaScript')
+    .pause(2500)
+    .deleteAll()
+    .start();
