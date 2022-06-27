@@ -166,7 +166,7 @@ header h2 {
 /* SECTION FOOTER */
 footer {
     height: 30vh;
-    background: linear-gradient( rgba(26,26,26,1),rgba(26,26,26, 0.5)), fixed no-repeat left / cover url(../img/bienvenue.jpg);
+    background: linear-gradient( rgba(26,26,26,1),rgba(26,26,26, 0.5)), fixed url(../img/bienvenue.jpg);
     color: #FCFCFC;
 }
 
