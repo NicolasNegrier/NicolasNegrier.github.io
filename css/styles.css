@@ -27,6 +27,12 @@ body {
     box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.25);
 }
 
+/* OPACITY */
+.opacity {
+    opacity: 0;
+    transition: all 1s ease-out ;
+}
+
 /* HEADER */
 header {
     background: linear-gradient( rgba(26,26,26,1),rgba(26,26,26, 0.5)), fixed url(../img/bienvenue.jpg) ;
@@ -80,6 +86,7 @@ header h2 {
     padding-top: 5rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    transition: all 1s ease-out ;
 }
 
 .hard-skill>div:last-child {

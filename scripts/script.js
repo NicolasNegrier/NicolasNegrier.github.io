@@ -54,22 +54,28 @@ const app = {
         const Elm = document.querySelector();
     },
 
-    // scrollListner: () => {
-    //     const options = {
-    //         // root: document.querySelector('#presentation'),
-    //         rootMargin: '0px',
-    //         threshold: 1.0
-    //       }
+    scrollListner: () => {
+        const options = {
+            // root: document.querySelector('#presentation'),
+            rootMargin: '0px',
+            threshold: 1.0
+          }
           
-    //     const observer = new IntersectionObserver(app.handleScroll, options);
+        const observer = new IntersectionObserver(app.handleScroll, {threshold: 0.5});
 
-    //     const elm = document.querySelector('#hard-skill');
-    //     observer.observe(elm);
-    // },
+        const elm = document.querySelector('.observer');
+        observer.observe(elm);
+    },
 
-    // handleScroll: (event) => {
-    //     console.log('coucou');
-    // },
+    handleScroll: (entries) => {
+        entries.forEach(entry => {
+            
+            const targetElm = entry.target;
+            console.log(targetElm.classList);
+            targetElm.classList.toggle('opacity');
+        });
+        
+    },
 
     init: () => {
         app.headerAnimate();
