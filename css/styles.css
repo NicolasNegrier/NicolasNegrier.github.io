@@ -27,12 +27,6 @@ body {
     box-shadow: 4px 4px 4px 0px rgba(0,0,0,0.25);
 }
 
-/* OPACITY */
-.opacity {
-    opacity: 0;
-    transition: all 1s ease-out ;
-}
-
 /* HEADER */
 header {
     background: linear-gradient( rgba(26,26,26,1),rgba(26,26,26, 0.5)), fixed url(../img/bienvenue.jpg) ;
@@ -86,6 +80,8 @@ header h2 {
     padding-top: 5rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    opacity: 0;
+    transform: translateY(30px);
     transition: all 1s ease-out ;
 }
 
@@ -148,6 +144,7 @@ header h2 {
 
 .soft-skill__item {
     padding: 40px;
+    transform: translateX(30px);
 }
 
 .item__header h2{
@@ -170,6 +167,15 @@ header h2 {
     margin-bottom: 0.7rem;
 }
 
+.item__main, .item__header, .soft-skill__item {
+    opacity: 0;
+    transition: all 1s ease-out ;
+}
+
+.item__main, .item__header {
+    transform: translateX(-60px);
+}
+
 /* SECTION FOOTER */
 footer {
     height: 30vh;
@@ -181,4 +187,23 @@ footer {
     justify-content: space-evenly;
     width: 100%;
     flex-grow: 2;
+}
+
+/* EFFET SCROLL */
+.translateY {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s ease-out ;
+}
+
+.translateX-droite {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s ease-out ;
+}
+
+.translateX-gauche {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1s ease-out ;
 }

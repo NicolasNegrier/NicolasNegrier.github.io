@@ -49,30 +49,50 @@ const app = {
     },
 
     // Apparition element au scroll
-
-    initCss: () => {
-        const Elm = document.querySelector();
-    },
-
+    
     scrollListner: () => {
-        const options = {
-            // root: document.querySelector('#presentation'),
-            rootMargin: '0px',
-            threshold: 1.0
-          }
-          
-        const observer = new IntersectionObserver(app.handleScroll, {threshold: 0.5});
+        const ratio = 0.30;
+        const observer = new IntersectionObserver(app.handleScroll, {threshold: ratio});
 
-        const elm = document.querySelector('.observer');
-        observer.observe(elm);
+        const hardSkillElms = document.querySelectorAll('.hard-skill__cat');
+        hardSkillElms.forEach(hardSkillElm => {
+            observer.observe(hardSkillElm);
+        })
+
+        const softSkillElms = document.querySelectorAll('.soft-skill__item');
+        softSkillElms.forEach(softSkillElm => {
+            observer.observe(softSkillElm);
+        })
+        
     },
 
     handleScroll: (entries) => {
         entries.forEach(entry => {
-            
             const targetElm = entry.target;
-            console.log(targetElm.classList);
-            targetElm.classList.toggle('opacity');
+            // console.log(entry.target);
+            const softSkillFirstChildElm = entry.target.firstElementChild;
+            const softSkillLastChildElm = entry.target.lastElementChild;
+            if (entry.isIntersecting) {
+                
+                if (targetElm.classList[0] === "hard-skill__cat") {
+                    console.log('visible hard');
+                    targetElm.classList.add('translateY');
+                }else if (targetElm.classList[0] === "soft-skill__item") {
+                    console.log('visible soft');
+                    targetElm.classList.add('translateX-droite');
+                    softSkillFirstChildElm.classList.add('translateX-gauche');
+                    softSkillLastChildElm.classList.add('translateX-gauche');
+                }
+            }else {
+                console.log('non visible');
+                if (targetElm.classList[0] === "hard-skill__cat") {
+                    targetElm.classList.remove('translateY');
+                }else if (targetElm.classList[0] === "soft-skill__item") {
+                    targetElm.classList.remove('translateX-droite');
+                    softSkillFirstChildElm.classList.remove('translateX-gauche');
+                    softSkillLastChildElm.classList.remove('translateX-gauche');
+                }
+            }
         });
         
     },
