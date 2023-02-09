@@ -196,7 +196,7 @@ figcaption {
 
 .section2 {
     background: center / cover no-repeat url(../img/groupe.jpg);
-    background-attachment: fixed;
+    background-attachment: scroll;
     justify-content: start;
 }
 
