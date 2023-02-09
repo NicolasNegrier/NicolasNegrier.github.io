@@ -5,6 +5,10 @@
     font-family: 'Twinkle Star', cursive;
 }
 
+.main {
+    width: 100%;
+}
+
 h1 {
     font-size: 4rem;
     text-align: center;
