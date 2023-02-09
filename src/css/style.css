@@ -203,11 +203,11 @@ figcaption {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     justify-content: start;
 }
 
-.section2::before {
+/* .section2::before {
     max-width: 100vw;
     display: block;
     position: fixed;
@@ -221,7 +221,7 @@ figcaption {
     background-position: center;
     background-attachment: fixed;
     justify-content: start;
-}
+} */
 
 .section2__text {
     background-color: rgba(251, 86, 7, 0.5);
