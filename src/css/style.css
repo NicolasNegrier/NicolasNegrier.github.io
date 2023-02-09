@@ -195,6 +195,7 @@ figcaption {
 /************************************ SECTION 2 **************************************************************************/
 
 .section2 {
+    max-width: 100%;
     background-image: url(../img/groupe.jpg);
     background-size: cover;
     background-repeat: no-repeat;
