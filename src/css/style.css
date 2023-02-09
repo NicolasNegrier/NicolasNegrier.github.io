@@ -206,6 +206,21 @@ figcaption {
     justify-content: start;
 }
 
+.section2::before {
+    display: block;
+    position: fixed;
+    z-index: -10;
+    background-image: url(../img/groupe.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    justify-content: start;
+}
+
 .section2__text {
     background-color: rgba(251, 86, 7, 0.5);
     padding: 1rem 2rem;
