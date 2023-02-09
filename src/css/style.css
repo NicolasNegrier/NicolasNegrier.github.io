@@ -195,8 +195,11 @@ figcaption {
 /************************************ SECTION 2 **************************************************************************/
 
 .section2 {
-    background: center / cover no-repeat url(../img/groupe.jpg);
-    background-attachment: scroll;
+    background-image: url(../img/groupe.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     justify-content: start;
 }
 
