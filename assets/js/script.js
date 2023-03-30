@@ -3,6 +3,7 @@ const game = {
     // Tableau alphabet
     alphabet: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
   
+    // Fonction de mélange du contenu d'un tableau
     shuffle: (tab) => {
         let i, j, tmp;
         for (i = tab.length - 1; i > 0; i--) {
@@ -15,17 +16,23 @@ const game = {
     },
 
     goodOrNot: (event, letterModel, cat) => {
-        console.log(event.target);
+        // Récupération de l'élément selectionné
         const src = event.target.src;
+
+        // Découpage du chemin et stockage dans un tableau
         let srcArray = src.split('/');
-        console.log(srcArray);
+        
+        // Recupération du dernier element du tableau
         let response = srcArray.pop();
         let goodAnswer = letterModel + ".jpg";
-        console.log(response == goodAnswer);
+        
+        // Vérification si bonne réponse
         if (response == goodAnswer){
-            if(window.confirm("Une nouvelle partie?")){
+            if(window.confirm("BRAVO!!!! Une nouvelle partie?")){
                 game.play(cat);
             }
+        }else{
+            alert("Essaie encore!")
         }
     },
 
@@ -34,6 +41,7 @@ const game = {
         // Generation d'un tableau de chiffres au hazard
         let randomNumbers = [];
 
+        // Génération de 3 nombres au hazard en evitant un double
         for (let i = 0; i < 3; i++){
             let randomNumber = Math.floor(Math.random() * 26);
             if (randomNumbers.find(el => el == randomNumber)) {
@@ -42,24 +50,16 @@ const game = {
             randomNumbers.push(randomNumber);
         }
 
-        console.log(randomNumbers);
-
-        let newTab = game.shuffle(randomNumbers);
-
-        console.log(newTab);
-
         // rest div container
         const container = document.querySelector(".container");
         container.textContent = "";
 
         const catSelected = cat.split('-');
-        console.log(catSelected);
 
         // Recupération des lettres correspondant à randomNumbers
         let randomLetter1 = game.alphabet[randomNumbers[0]];
         let randomLetter2 = game.alphabet[randomNumbers[1]];
         let randomLetter3 = game.alphabet[randomNumbers[2]];
-        console.log(randomLetter1, randomLetter2, randomLetter3);
 
         // Construction retour home page
         const buttonContainer = document.createElement("div");
@@ -93,10 +93,10 @@ const game = {
         const imgResponse3 = document.createElement("img");
         imgResponse3.src = "assets/img/" + catSelected[1] + "/" + randomLetter3 + ".jpg";
 
+        // Insertion des réponses dans un tableau
         responses.push(imgResponse1, imgResponse2, imgResponse3);
 
-        console.log(responses);
-
+        // Melange des réponses dans le tableau
         let responsesShuffle = game.shuffle(responses);
 
         // Insertion des elements
@@ -110,7 +110,6 @@ const game = {
         // Insertion de la partie model
         container.appendChild(divModel);
         divModel.appendChild(imgModel);
-        console.log(imgModel.src);
 
         // Insertion de la partie réponses
         container.appendChild(divResponses);
@@ -123,7 +122,7 @@ const game = {
     select: () => {
         // Récupération du choix de la partie
         const choices = document.querySelectorAll(".select");
-        console.log(choices);
+        
         // Boucle sur le tableau des éléments pour y mettre un ecouteur d'evenement
         for (const choice of choices) {
             // recupération du data
@@ -133,8 +132,6 @@ const game = {
     }
     
 };
-
-
 
 function init() {
     console.log("chargement terminé");
