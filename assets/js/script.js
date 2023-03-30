@@ -36,6 +36,9 @@ const game = {
 
         for (let i = 0; i < 3; i++){
             let randomNumber = Math.floor(Math.random() * 26);
+            if (randomNumbers.find(el => el == randomNumber)) {
+                i--;
+            }
             randomNumbers.push(randomNumber);
         }
 
