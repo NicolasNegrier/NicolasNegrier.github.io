@@ -22,6 +22,8 @@ h3 {
 
 h4 {
     font-size: 2rem;
+    margin: 2rem 2rem 0 2rem;
+    text-align: center;
 }
 
 p {
@@ -249,7 +251,7 @@ figcaption {
 
 .tous {
     max-width: 100vw;
-    background-image: url(../img/danse-groupe.jpg);
+    background-image: url(../img/galerie/shoot7.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
