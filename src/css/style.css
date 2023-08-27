@@ -428,7 +428,7 @@ figcaption {
 }
 
 li.film {
-    height: 700px !important;
+    height: auto !important;
 }
 
 #gallery li img, #gallery li video {
@@ -498,3 +498,138 @@ li.film {
 #contact li {
     list-style: inside;
 }
+
+@media screen and (max-width: 800px) {
+    .container {
+        max-width: none;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    
+    h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+    }
+
+    .burger {
+        width: 30px;
+        height: 30px;
+        border: 0;
+        padding: 0;
+        margin: 10px;
+        cursor: pointer;
+        display: flex;
+        background: #F5F5F5;
+        align-items: center;
+        position: relative;
+        border-radius: 3px;
+    }
+    
+    .burger span:nth-child(1), .burger span:nth-child(3) {
+        transition: transform 0.3s ease-out;
+    }
+    
+    .burger span:nth-child(1) {
+        transform: translateY(8px);
+    }
+    
+    .burger span:nth-child(3) {
+        transform: translateY(-8px);
+    }
+    
+    .burger.open span:nth-child(1) {
+        transform: translate(0) rotate(135deg);
+    }
+    
+    .burger.open span:nth-child(2) {
+        opacity: 0;
+        transform: opacity 0s;
+    }
+    
+    .burger.open span:nth-child(3) {
+        transform: translate(0) rotate(-135deg);
+    }
+    
+    .burger span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #22252C;
+        position: absolute;
+        pointer-events: none;
+        transition: opacity 0.3s 0.15s ease-out;
+    }
+
+    .nav {
+        width: auto;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }    
+    
+    .nav__link {
+        background-color: rgba(34,37,44, 0.7);
+        height: 100vh;
+        width: 100vw;
+        padding: 70px 1rem;
+        position: absolute;
+        transform: translate(-100%);
+        transition: transform 0.3s ease-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .nav__link a {
+        width: 100%;
+        height: auto;
+        border-radius: 0%;
+        margin: auto;
+    }
+    
+    .nav__link i {
+        font-size: 4rem;
+    }
+    
+    .open {
+        transform: translate(0%);
+    }
+
+    .biodanza__block, .createur__block, .tous__block, .who__block, .vivencia__block, .section5__text {
+        padding: 0.5rem;
+        width: 95%;
+    }
+
+    .createur {
+        height: auto;
+    }
+
+    .who, .createur {
+        flex-direction: column;
+    }
+
+    .photoCreateur {
+        max-width: 80%;
+    }
+
+    .createur figure {
+        max-height: none;
+        align-items: center;
+    }
+
+  }
