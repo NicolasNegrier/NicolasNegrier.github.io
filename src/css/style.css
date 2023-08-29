@@ -86,7 +86,7 @@ section {
     font-weight: 600;
 }
 
-.header__title p:first-of-type {
+.header__title p {
     padding-top: 2rem;
 }
 
