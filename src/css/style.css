@@ -78,11 +78,16 @@ section {
     font-weight: 700;
 }
 
-.header__subtitle {
+.header__title p {
     width: 100%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
     font-weight: 600;
+}
+
+.header__title p:first-of-type {
+    padding-top: 2rem;
 }
 
 .header__subtitle :last-child {
@@ -199,7 +204,6 @@ section {
 
 /************************************ SECTION biodanza **************************************************************************/
 .biodanza {
-    background: linear-gradient( rgba(142, 236, 245, 0), rgba(142, 236, 245, 0.5)) ;
     max-width: 100vw;
 }
 
@@ -214,7 +218,7 @@ section {
 }
 
 .biodanza__block {
-    background-color: rgba(255,255,255,1);
+    background-color: rgb(142, 236, 245);
     padding: 3rem;
     border-radius: 1rem;
     box-shadow: 5px 5px 11px -2px rgba(0,0,0,0.8);
@@ -506,7 +510,7 @@ li.film {
     }
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     
     h2 {
@@ -610,9 +614,35 @@ li.film {
         transform: translate(0%);
     }
 
-    .biodanza__block, .createur__block, .tous__block, .who__block, .vivencia__block, .section5__text {
+    .biodanza__block, .createur__block, .tous__block, .who__block, .vivencia__block, .section5__text, .gallery__block {
         padding: 0.5rem;
         width: 95%;
+    }
+
+    .header {
+        background: linear-gradient( rgba(255, 255, 255, 0),rgba(255, 255, 255, 1)), center / cover no-repeat url(../img/bienvenue.jpg);
+    }
+
+    .header__logo {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .header__title p {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    .header__title p:last-of-type {
+        padding: 2rem 1rem 0 1rem;
+    }
+
+    .logo {
+        max-width: 50%;
+    }
+
+    .tous {
+        background-attachment: fixed;
     }
 
     .createur {
